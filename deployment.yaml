@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rushi-deployment    
+spec:
+  replicas: 2
+  selector:
+    matchlabels:
+      app: rushi_app
+  template: 
+    metadata:
+      labels:
+        app: rushi_app
+    spec:
+      containers:
+      - namen: nginx
+        image: nginx:1.14.2
+        ports:
+        - cintainerPort: 80
