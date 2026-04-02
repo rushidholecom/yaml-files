@@ -13,7 +13,7 @@ spec:
         app: rushi_app
     spec:
       containers:
-      - namen: nginx
+      - name: nginx
         image: nginx:1.14.2
         ports:
-        - cintainerPort: 80
+        - containerPort: 80
