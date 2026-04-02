@@ -1,9 +1,7 @@
 apiVersion: v1
 kind: Service
-Metadata:
+metadata:
   name: rushi-app-svc
-  labels:
-    app: rushi-app
 spec:
   type: NodePort
   selector:
