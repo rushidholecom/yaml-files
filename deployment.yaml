@@ -17,3 +17,25 @@ spec:
         image: nginx:1.14.2
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "250m"
+            memory: "256Mi"
+
+---
+
+#service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: rushi-service
+spec:
+  selector:
+    app: rushi_app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
