@@ -38,9 +38,12 @@ kind: Service
 metadata:
   name: rushi-service
 spec:
+  type: NodePort
   selector:
     app: rushi_app
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
+      nodePort: 30884
+  
