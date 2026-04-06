@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: rushi-replicaset
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rushi_app
+  template:
+    metadata:
+      labels:
+        app: rushi_template
+    spec:
+      containers:
+      - name: rushi-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80
